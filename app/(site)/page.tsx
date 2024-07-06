@@ -25,16 +25,6 @@ export default function Home() {
       <Hero />
       <Brands />
       <Feature />
-      <About />
-      <FeaturesTab />
-      <FunFact />
-      <Integration />
-      <CTA />
-      <FAQ />
-      <Testimonial />
-      <Pricing />
-      <Contact />
-      <Blog />
     </main>
   );
 }
