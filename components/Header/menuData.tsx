@@ -23,7 +23,7 @@ const menuData: Menu[] = [
         id: 35,
         title: "Company",
         newTab: false,
-        path: "/auth/signup",
+        path: "/signup",
       },
     ],
   },

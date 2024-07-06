@@ -24,7 +24,7 @@ const BlogPage = () => {
         setCompanyData={setCompanyData}
         companyData={companyData}
       />
-      <section className="py-20 lg:py-25 xl:py-30">
+      <section className="py-15 lg:py-20 xl:py-25">
         <div className="mx-auto mt-15 max-w-c-1016 px-4 md:px-8 xl:mt-20 xl:px-0">
           <span className="text-3xl p-5 mt-10">Company Registration</span>
           <div className="rounded-sm border  border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
