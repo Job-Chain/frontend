@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-import { useRouter } from "next/navigation";
-
-function Modal({ modal, setModal }: any) {
+function ModalCompany({ modal, setModal, setUserData, userData }: any) {
+  const [companyData, setCompanyData] = useState<any>({});
   return (
     <>
       {modal && (
@@ -23,6 +22,10 @@ function Modal({ modal, setModal }: any) {
                 </label>
                 <input
                   type="text"
+                  onChange={(e) =>
+                    setCompanyData({ ...companyData, title: e.target.value })
+                  }
+                  value={companyData?.title}
                   placeholder="Ex. Sales manager"
                   className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                 />
@@ -31,7 +34,16 @@ function Modal({ modal, setModal }: any) {
                   Employement type
                 </label>
 
-                <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <select
+                  onChange={(e) =>
+                    setCompanyData({
+                      ...companyData,
+                      employmentType: e.target.value,
+                    })
+                  }
+                  value={companyData?.employmentType}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                >
                   <option value="Please select">Please select</option>
                   <option value="Full-time">Full-time</option>
                   <option value="Part-time">Part-time</option>
@@ -44,6 +56,13 @@ function Modal({ modal, setModal }: any) {
                   Company Name
                 </label>
                 <input
+                  onChange={(e) =>
+                    setCompanyData({
+                      ...companyData,
+                      companyName: e.target.value,
+                    })
+                  }
+                  value={companyData?.companyName}
                   type="text"
                   placeholder="Ex. Google"
                   className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -53,6 +72,13 @@ function Modal({ modal, setModal }: any) {
                 Location
               </label>
               <input
+                onChange={(e) =>
+                  setCompanyData({
+                    ...companyData,
+                    companyLocation: e.target.value,
+                  })
+                }
+                value={companyData?.companyLocation}
                 type="text"
                 placeholder="Ex. Totonto"
                 className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -68,6 +94,13 @@ function Modal({ modal, setModal }: any) {
                     <label className="">Month of Start date</label>
                     <span data-test-date-dropdown-month="">
                       <select
+                        onChange={(e) =>
+                          setCompanyData({
+                            ...companyData,
+                            monthOfStart: e.target.value,
+                          })
+                        }
+                        value={companyData?.monthOfStart}
                         data-test-month-select=""
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         id="date-range-form-component-profileEditFormElement-POSITION-profilePosition-ACoAACbb370Bj9SCs9BFN3VxyjmJv1hozG86U5s-1-dateRange-start-date"
@@ -101,6 +134,13 @@ function Modal({ modal, setModal }: any) {
                       data-test-date-dropdown-year=""
                     >
                       <select
+                        onChange={(e) =>
+                          setCompanyData({
+                            ...companyData,
+                            yearOfStart: e.target.value,
+                          })
+                        }
+                        value={companyData?.yearOfStart}
                         data-test-year-select=""
                         id="date-range-form-component-profileEditFormElement-POSITION-profilePosition-ACoAACbb370Bj9SCs9BFN3VxyjmJv1hozG86U5s-1-dateRange-start-date-year-select"
                         name="year"
@@ -224,6 +264,13 @@ function Modal({ modal, setModal }: any) {
                     <label className="">Month of End date</label>
                     <span data-test-date-dropdown-month="">
                       <select
+                        onChange={(e) =>
+                          setCompanyData({
+                            ...companyData,
+                            monthOfEnd: e.target.value,
+                          })
+                        }
+                        value={companyData?.monthOfEnd}
                         data-test-month-select=""
                         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         id="date-range-form-component-profileEditFormElement-POSITION-profilePosition-ACoAACbb370Bj9SCs9BFN3VxyjmJv1hozG86U5s-1-dateRange-start-date"
@@ -255,6 +302,13 @@ function Modal({ modal, setModal }: any) {
                       data-test-date-dropdown-year=""
                     >
                       <select
+                        onChange={(e) =>
+                          setCompanyData({
+                            ...companyData,
+                            yearOfEnd: e.target.value,
+                          })
+                        }
+                        value={companyData?.yearOfEnd}
                         data-test-year-select=""
                         id="date-range-form-component-profileEditFormElement-POSITION-profilePosition-ACoAACbb370Bj9SCs9BFN3VxyjmJv1hozG86U5s-1-dateRange-start-date-year-select"
                         name="year"
@@ -370,6 +424,13 @@ function Modal({ modal, setModal }: any) {
                 </div>
               </fieldset>
               <button
+                onClick={() => {
+                  console.log(companyData);
+                  let companyArray = userData.companyDataArray || []; // get the array of company data
+                  companyArray.push(companyData);
+                  setUserData({ ...userData, companyDataArray: companyArray });
+                  setModal(false);
+                }}
                 aria-label="signup with email and password"
                 className="inline-flex items-center gap-2.5 mt-3 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
               >
@@ -383,4 +444,4 @@ function Modal({ modal, setModal }: any) {
   );
 }
 
-export default Modal;
+export default ModalCompany;
