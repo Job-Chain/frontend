@@ -38,26 +38,26 @@ const Header = () => {
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
-            {/* <Image
-              src="/images/logo/logo-dark.svg"
+            <Image
+              src="/images/logo/jobchain-line.gif"
               alt="logo"
-              width={119.03}
-              height={30}
+              width={100}
+              height={50}
               className="hidden w-full dark:block"
-            /> */}
-            <div className="hidden mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero  w-full dark:block ">
+            />
+            {/* <div className="hidden mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero  w-full dark:block ">
               jobChain
             </div>
             <div className="mb-5 pr-16 text-3xl dark:hidden font-bold text-black dark:text-white xl:text-hero  w-full  ">
               jobChain
-            </div>
-            {/* <Image
-              src="/images/logo/logo-light.svg"
+            </div> */}
+            <Image
+              src="/images/logo/jobchain-line.gif"
               alt="logo"
-              width={119.03}
-              height={30}
+              width={100}
+              height={50}
               className="w-full dark:hidden"
-            /> */}
+            />
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}
