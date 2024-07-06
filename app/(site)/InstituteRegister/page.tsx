@@ -1,15 +1,23 @@
 "use client";
 
+import { NearContext } from "@/app/context";
 import ModalCompany from "@/components/ModalCompany";
 import ModalEducation from "@/components/ModalEducation";
 import { WalletConnect } from "@/components/walletConnect";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 const BlogPage = () => {
   const [modal, setModal] = useState(false);
   const [modalEducation, setModalEducation] = useState(false);
   const [instituteData, setInstituteData] = useState<any>({});
+  const { signedAccountId, wallet } = useContext(NearContext);
+  const navigate = useRouter();
+  useEffect(() => {
+    if (!wallet) return;
+  }, [signedAccountId, wallet]);
   return (
     <>
       <section className="py-15 lg:py-20 xl:py-25">
@@ -121,7 +129,32 @@ const BlogPage = () => {
               ></button> */}
               <WalletConnect />
               <div className="cursor-pointer inline-flex items-center gap-2.5  rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho">
-                <button className="btn btn-secondary">Register</button>
+                <button
+                  onClick={() => {
+                    let data = {
+                      ...instituteData,
+                      account: signedAccountId,
+                    };
+                    console.log(data);
+                    axios
+                      .post("http://localhost:8000/institute/saveInstitute", {
+                        institute: data,
+                      })
+                      .then((response) => {
+                        // Handle success
+                        console.log("Response:", response.data);
+                        alert("Data saved");
+                        navigate.push("Profile");
+                      })
+                      .catch((error) => {
+                        // Handle error
+                        console.error("Error:", error);
+                      });
+                  }}
+                  className="btn btn-secondary"
+                >
+                  Register
+                </button>
               </div>
             </div>
           </div>

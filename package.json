@@ -21,6 +21,7 @@
     "@web3-onboard/injected-wallets": "^2.11.1",
     "@web3-onboard/ledger": "^2.7.1",
     "autoprefixer": "^10.4.16",
+    "axios": "^1.7.2",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.16",
