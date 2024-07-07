@@ -46,7 +46,8 @@ const MintSBT = () => {
                 token_owner_id: tokenMetadata.recipientId,
                 token_metadata: {
                   title: tokenMetadata.title,
-                  media: "",
+                  media:
+                    "ipfs://bafybeic3747hduihyqbmamreua65aqsnlacbymi5yr73cncimgiey2ctui/",
                   description: tokenMetadata.description,
                 },
               },

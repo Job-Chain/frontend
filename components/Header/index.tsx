@@ -39,7 +39,7 @@ const Header = () => {
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
             <Image
-              src="/images/logo/jobchain-line.gif"
+              src="/images/logo/logo.png"
               alt="logo"
               width={100}
               height={50}
@@ -52,7 +52,7 @@ const Header = () => {
               jobChain
             </div> */}
             <Image
-              src="/images/logo/jobchain-line.gif"
+              src="/images/logo/logo.png"
               alt="logo"
               width={100}
               height={50}
@@ -109,7 +109,7 @@ const Header = () => {
           }`}
         >
           <nav>
-            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+            {/* <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
               {menuData.map((menuItem, key) => (
                 <li key={key} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (
@@ -154,7 +154,7 @@ const Header = () => {
                   )}
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">

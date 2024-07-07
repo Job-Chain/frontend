@@ -16,14 +16,15 @@ const Hero = () => {
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                🔥 JobChain
+                {/* 🔥 JobChain */}
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
                 End-to-end CV Automation
               </h1>
               <p>
                 JobChain is a CV automation platform that helps you create a
-                professional CV in minutes. Get started for free.<br/>
+                professional CV in minutes. Get started for free.
+                <br />
                 JobChain ensure CVs are verified and validated.
               </p>
 
@@ -54,7 +55,6 @@ const Hero = () => {
 
             <div className="animate_right hidden md:w-1/2 lg:block">
               <div className="relative 2xl:-mr-7.5">
-               
                 <div className=" relative aspect-[300/300] w-full">
                   <Image
                     className="shadow-solid-l dark:hidden"
