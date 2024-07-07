@@ -46,6 +46,7 @@ const MintSBT = () => {
                 token_owner_id: tokenMetadata.recipientId,
                 token_metadata: {
                   title: tokenMetadata.title,
+                  media: "",
                   description: tokenMetadata.description,
                 },
               },
