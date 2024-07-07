@@ -47,6 +47,16 @@ const Profile = () => {
               </div>
               <div className="col-span-4 sm:col-span-9">
                 <div className="bg-white shadow rounded-lg p-6">
+                  <h2 className="text-xl font-bold mb-4">Validate your skills</h2>
+                  <iframe
+                    src="https://firica-questionnaire.hf.space"
+                    width="850"
+                    height="450"
+                  ></iframe>
+                </div>
+              </div>   
+              <div className="col-span-4 sm:col-span-9">
+                <div className="bg-white shadow rounded-lg p-6">
                   <h2 className="text-xl font-bold mb-4">About Me</h2>
                   <p className="text-gray-700">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
@@ -207,6 +217,7 @@ const Profile = () => {
                       suscipit.
                     </p>
                   </div>
+                  
                 </div>
               </div>
             </div>
