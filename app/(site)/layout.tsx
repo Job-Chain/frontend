@@ -10,7 +10,7 @@ import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 import ToasterContext from "../context/ToastContext";
-import { Navigation } from "@/components/navigation";
+
 import { NearContext } from "../context";
 import { useEffect, useState } from "react";
 import { Wallet } from "@/app/(site)/wallets/near";
