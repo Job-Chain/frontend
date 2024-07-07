@@ -1,17 +1,30 @@
 "use client";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import featuresData from "./featuresData";
 import SingleFeature from "./SingleFeature";
 import SectionHeader from "@/components/Common/SectionHeader";
 import { WalletConnect } from "@/components/walletConnect";
+import { NearContext } from "@/app/context";
+import { useRouter } from "next/navigation";
 
 const Signup = () => {
+  const { signedAccountId, wallet } = useContext(NearContext);
+  let navigate = useRouter();
+  useEffect(() => {
+    if (signedAccountId) navigate.push("Profile/candidate");
+  }, [signedAccountId]);
+
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
       <section id="features" className="py-15 lg:py-20 xl:py-25">
         <div className="mx-auto  max-w-c-1315 px-4 md:px-8 xl:px-0">
-          Login with your wallet <WalletConnect />
+          {!signedAccountId && (
+            <>
+              Login with your wallet <WalletConnect />
+            </>
+          )}
+
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{

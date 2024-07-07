@@ -50,10 +50,20 @@ const Profile = () => {
                 <div className="bg-white shadow rounded-lg p-6">
                   <h2 className="text-xl font-bold mb-4">About Me</h2>
                   <p className="text-gray-700">
-                  Hello, I'm John Doe, a dedicated software developer with over five years of experience in the tech industry. I specialize in full-stack development, with a strong proficiency in JavaScript, Python, and cloud technologies. My passion lies in creating efficient, scalable, and user-friendly applications that solve real-world problems. I thrive in collaborative environments and enjoy working on innovative projects that push the boundaries of technology. Always eager to learn and adapt, I'm committed to continuous professional growth and contributing to impactful software solutions.
+                    Hello, I'm John Doe, a dedicated software developer with
+                    over five years of experience in the tech industry. I
+                    specialize in full-stack development, with a strong
+                    proficiency in JavaScript, Python, and cloud technologies.
+                    My passion lies in creating efficient, scalable, and
+                    user-friendly applications that solve real-world problems. I
+                    thrive in collaborative environments and enjoy working on
+                    innovative projects that push the boundaries of technology.
+                    Always eager to learn and adapt, I'm committed to continuous
+                    professional growth and contributing to impactful software
+                    solutions.
                   </p>
 
-                  <h3 className="font-semibold text-center mt-3 -mb-2">
+                  {/* <h3 className="font-semibold text-center mt-3 -mb-2">
                     Find me on
                   </h3>
                   <div className="flex justify-center items-center gap-6 my-6">
@@ -142,23 +152,42 @@ const Profile = () => {
                         ></path>
                       </svg>
                     </a>
+                  </div> */}
+                  <h2 className="text-xl font-bold mt-6 mb-4">Certificate</h2>
+                  <div className="mb-6">
+                    <div className="flex justify-between flex-wrap gap-2 w-full">
+                      <span className="text-gray-700 font-bold">
+                        Certificate of Completion for Cloud & DevOps: Continuous
+                        Transformation from MIT
+                      </span>
+                      <p>
+                        <a
+                          className="text-gray-700 mr-2 text-blue underline cursor-pointer"
+                          href={
+                            "https://testnet.mintbase.xyz/meta/jobchainv1.mintspace2.testnet:73d77f252c409b9097b2b082196bfe38"
+                          }
+                          target="_blank"
+                        >
+                          Verify
+                        </a>
+                      </p>
+                    </div>
                   </div>
-
                   <h2 className="text-xl font-bold mt-6 mb-4">Experience</h2>
                   <div className="mb-6">
                     <div className="flex justify-between flex-wrap gap-2 w-full">
                       <span className="text-gray-700 font-bold">
-                        Web Developer
+                        Fullstack Developer
                       </span>
                       <p>
-                        <span className="text-gray-700 mr-2">
-                          Microsoft
-                        </span>
+                        <span className="text-gray-700 mr-2">Microsoft</span>
                         <span className="text-gray-700">2013 - 2015</span>
                       </p>
                     </div>
                     <p className="mt-2">
-                      Developed and maintained robust web applications using React and Node.js, enhancing user experience and performance for a leading e-commerce platform.
+                      Developed and maintained robust web applications using
+                      React and Node.js, enhancing user experience and
+                      performance for a leading e-commerce platform.
                     </p>
                   </div>
                   <div className="mb-6">
@@ -167,30 +196,30 @@ const Profile = () => {
                         Web Developer
                       </span>
                       <p>
-                        <span className="text-gray-700 mr-2">
-                          Google
-                        </span>
+                        <span className="text-gray-700 mr-2">Google</span>
                         <span className="text-gray-700">201 - 2017</span>
                       </p>
                     </div>
                     <p className="mt-2">
-                      Led a team of developers in migrating legacy systems to cloud infrastructure, resulting in a 30% increase in system reliability and scalability.
+                      Led a team of developers in migrating legacy systems to
+                      cloud infrastructure, resulting in a 30% increase in
+                      system reliability and scalability.
                     </p>
                   </div>
                   <div className="mb-6">
                     <div className="flex justify-between flex-wrap gap-2 w-full">
                       <span className="text-gray-700 font-bold">
-                        Web Developer
+                        Developer trainee
                       </span>
                       <p>
-                        <span className="text-gray-700 mr-2">
-                          Amazon
-                        </span>
+                        <span className="text-gray-700 mr-2">Amazon</span>
                         <span className="text-gray-700">2017 - 2019</span>
                       </p>
                     </div>
                     <p className="mt-2">
-                    Implemented automated testing frameworks and CI/CD pipelines, significantly reducing deployment times and increasing code quality.
+                      Implemented automated testing frameworks and CI/CD
+                      pipelines, significantly reducing deployment times and
+                      increasing code quality.
                     </p>
                   </div>
                 </div>

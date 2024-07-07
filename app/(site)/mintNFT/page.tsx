@@ -78,10 +78,10 @@ const MintSBT = () => {
     <>
       <section id="features" className="py-15 lg:py-20 xl:py-25">
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-          <div className="mb-10">
+          {/* <div className="mb-10">
             <h2 className="mb-4 text-2xl font-bold">Login with your wallet</h2>
             <WalletConnect />
-          </div>
+          </div> */}
 
           <SectionHeader
             headerInfo={{

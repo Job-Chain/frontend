@@ -2,10 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { NearContext } from "@/app/context";
+import { WalletConnect } from "../walletConnect";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -26,6 +28,7 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
   });
+  const { signedAccountId, wallet } = useContext(NearContext);
 
   return (
     <header
@@ -160,12 +163,21 @@ const Header = () => {
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
 
-            <Link
-              href="/signup"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
-            >
-              Login / Signup
-            </Link>
+            {!signedAccountId && (
+              <>
+                <Link
+                  href="/signup"
+                  className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
+                >
+                  Login / Signup
+                </Link>
+              </>
+            )}
+            {signedAccountId && (
+              <>
+                <WalletConnect />
+              </>
+            )}
           </div>
         </div>
       </div>

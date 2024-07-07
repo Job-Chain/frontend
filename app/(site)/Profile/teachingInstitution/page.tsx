@@ -1,5 +1,9 @@
 "use client";
+
+import { useRouter } from "next/navigation";
+
 const Profile = () => {
+  let navigate = useRouter();
   return (
     <>
       <section className="py-15 lg:py-20 xl:py-25">
@@ -30,7 +34,18 @@ const Profile = () => {
                 <div className="bg-white shadow rounded-lg p-6">
                   <h2 className="text-xl font-bold mb-4">About MIT</h2>
                   <p className="text-gray-700">
-                  The Massachusetts Institute of Technology (MIT) is a prestigious private research university located in Cambridge, Massachusetts. Renowned for its cutting-edge research and innovation, MIT excels in the fields of science, engineering, and technology. The institute offers a rigorous academic curriculum that fosters interdisciplinary learning and entrepreneurial spirit. With a strong emphasis on practical, hands-on experience, MIT prepares its students to solve complex global challenges. Its vibrant campus culture, world-class faculty, and extensive industry partnerships make MIT a leader in higher education and a hub of intellectual advancement.
+                    The Massachusetts Institute of Technology (MIT) is a
+                    prestigious private research university located in
+                    Cambridge, Massachusetts. Renowned for its cutting-edge
+                    research and innovation, MIT excels in the fields of
+                    science, engineering, and technology. The institute offers a
+                    rigorous academic curriculum that fosters interdisciplinary
+                    learning and entrepreneurial spirit. With a strong emphasis
+                    on practical, hands-on experience, MIT prepares its students
+                    to solve complex global challenges. Its vibrant campus
+                    culture, world-class faculty, and extensive industry
+                    partnerships make MIT a leader in higher education and a hub
+                    of intellectual advancement.
                   </p>
 
                   <h3 className="font-semibold text-center mt-3 -mb-2">
@@ -123,9 +138,16 @@ const Profile = () => {
                       </svg>
                     </a>
                   </div>
-                  <div  className="bg-white shadow rounded-lg p-6">
-                    <h2 className="text-xl font-bold mb-4">Give a certificate as an NFT to a student</h2>
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+                  <div className="bg-white shadow rounded-lg p-6">
+                    <h2 className="text-xl font-bold mb-4">
+                      Give a certificate as an NFT to a student
+                    </h2>
+                    <button
+                      onClick={() => {
+                        navigate.push("/mintNFT");
+                      }}
+                      className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+                    >
                       Give an certificate
                     </button>
                   </div>
