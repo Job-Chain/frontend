@@ -50,13 +50,7 @@ const Profile = () => {
                 <div className="bg-white shadow rounded-lg p-6">
                   <h2 className="text-xl font-bold mb-4">About Me</h2>
                   <p className="text-gray-700">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    finibus est vitae tortor ullamcorper, ut vestibulum velit
-                    convallis. Aenean posuere risus non velit egestas suscipit.
-                    Nunc finibus vel ante id euismod. Vestibulum ante ipsum
-                    primis in faucibus orci luctus et ultrices posuere cubilia
-                    Curae; Aliquam erat volutpat. Nulla vulputate pharetra
-                    tellus, in luctus risus rhoncus id.
+                  Hello, I'm John Doe, a dedicated software developer with over five years of experience in the tech industry. I specialize in full-stack development, with a strong proficiency in JavaScript, Python, and cloud technologies. My passion lies in creating efficient, scalable, and user-friendly applications that solve real-world problems. I thrive in collaborative environments and enjoy working on innovative projects that push the boundaries of technology. Always eager to learn and adapt, I'm committed to continuous professional growth and contributing to impactful software solutions.
                   </p>
 
                   <h3 className="font-semibold text-center mt-3 -mb-2">
@@ -158,16 +152,13 @@ const Profile = () => {
                       </span>
                       <p>
                         <span className="text-gray-700 mr-2">
-                          at ABC Company
+                          Microsoft
                         </span>
-                        <span className="text-gray-700">2017 - 2019</span>
+                        <span className="text-gray-700">2013 - 2015</span>
                       </p>
                     </div>
                     <p className="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed finibus est vitae tortor ullamcorper, ut vestibulum
-                      velit convallis. Aenean posuere risus non velit egestas
-                      suscipit.
+                      Developed and maintained robust web applications using React and Node.js, enhancing user experience and performance for a leading e-commerce platform.
                     </p>
                   </div>
                   <div className="mb-6">
@@ -177,16 +168,13 @@ const Profile = () => {
                       </span>
                       <p>
                         <span className="text-gray-700 mr-2">
-                          at ABC Company
+                          Google
                         </span>
-                        <span className="text-gray-700">2017 - 2019</span>
+                        <span className="text-gray-700">201 - 2017</span>
                       </p>
                     </div>
                     <p className="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed finibus est vitae tortor ullamcorper, ut vestibulum
-                      velit convallis. Aenean posuere risus non velit egestas
-                      suscipit.
+                      Led a team of developers in migrating legacy systems to cloud infrastructure, resulting in a 30% increase in system reliability and scalability.
                     </p>
                   </div>
                   <div className="mb-6">
@@ -196,16 +184,13 @@ const Profile = () => {
                       </span>
                       <p>
                         <span className="text-gray-700 mr-2">
-                          at ABC Company
+                          Amazon
                         </span>
                         <span className="text-gray-700">2017 - 2019</span>
                       </p>
                     </div>
                     <p className="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed finibus est vitae tortor ullamcorper, ut vestibulum
-                      velit convallis. Aenean posuere risus non velit egestas
-                      suscipit.
+                    Implemented automated testing frameworks and CI/CD pipelines, significantly reducing deployment times and increasing code quality.
                     </p>
                   </div>
                 </div>
