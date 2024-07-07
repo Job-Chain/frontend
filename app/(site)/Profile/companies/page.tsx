@@ -123,6 +123,12 @@ const Profile = () => {
                       </svg>
                     </a>
                   </div>
+                  <div  className="bg-white shadow rounded-lg p-6">
+                    <h2 className="text-xl font-bold mb-4">Give an experience as an NFT to an employee</h2>
+                    <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+                      Give an experience
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
