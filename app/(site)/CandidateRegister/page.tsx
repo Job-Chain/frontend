@@ -3,6 +3,7 @@
 import { NearContext } from "@/app/context";
 import ModalCompany from "@/components/ModalCompany";
 import ModalEducation from "@/components/ModalEducation";
+import { NearWalletConnector } from "@/components/NearWalletSelector";
 import { WalletConnect } from "@/components/walletConnect";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -196,8 +197,8 @@ const BlogPage = () => {
                 aria-label="signup with email and password"
                 className="inline-flex items-center gap-2.5  rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
               ></button> */}
-              <WalletConnect />
-
+              {/* <WalletConnect /> */}
+              <NearWalletConnector />
               <div className="cursor-pointer inline-flex items-center gap-2.5  rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho">
                 <button
                   onClick={() => {

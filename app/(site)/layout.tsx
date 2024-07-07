@@ -1,4 +1,5 @@
 "use client";
+import { MintbaseWalletContextProvider } from "@mintbase-js/react";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -34,20 +35,26 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`dark:bg-black ${inter.className}`}>
         <NearContext.Provider value={{ wallet, signedAccountId }}>
-          <ThemeProvider
-            enableSystem={false}
-            attribute="class"
-            defaultTheme="light"
+          <MintbaseWalletContextProvider
+            contractAddress="jobchain.testnet"
+            network="testnet"
+            callbackUrl="http://localhost:3000"
           >
-            <Lines />
-            <Header />
+            <ThemeProvider
+              enableSystem={false}
+              attribute="class"
+              defaultTheme="light"
+            >
+              <Lines />
+              <Header />
 
-            <ToasterContext />
+              <ToasterContext />
 
-            {children}
-            <Footer />
-            <ScrollToTop />
-          </ThemeProvider>
+              {children}
+              <Footer />
+              <ScrollToTop />
+            </ThemeProvider>
+          </MintbaseWalletContextProvider>
         </NearContext.Provider>
       </body>
     </html>

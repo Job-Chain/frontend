@@ -3,13 +3,22 @@ import React, { useState, useContext } from "react";
 import SectionHeader from "@/components/Common/SectionHeader";
 import { WalletConnect } from "@/components/walletConnect";
 import { NearContext } from "@/app/context";
+import { useMbWallet } from "@mintbase-js/react";
 
 const MintSBT = () => {
   const { signedAccountId, wallet } = useContext(NearContext);
+  const {
+    connect,
+    disconnect,
+    activeAccountId,
+    selector,
+    isConnected,
+    errorMessage,
+  } = useMbWallet();
   const [tokenMetadata, setTokenMetadata] = useState({
     title: "",
     description: "",
-    recipientId: ""
+    recipientId: "",
   });
 
   const mintSBT = async () => {
@@ -21,6 +30,8 @@ const MintSBT = () => {
     const contractId = "jobchain.testnet";
 
     try {
+      const wallet = await selector.wallet();
+
       const result = await wallet.signAndSendTransaction({
         receiverId: contractId,
         actions: [
@@ -29,18 +40,20 @@ const MintSBT = () => {
             params: {
               methodName: "sbt_mint",
               args: {
-                token_id: `${tokenMetadata.recipientId}-${new Date().getTime()}`,
+                token_id: `${
+                  tokenMetadata.recipientId
+                }-${new Date().getTime()}`,
                 token_owner_id: tokenMetadata.recipientId,
                 token_metadata: {
                   title: tokenMetadata.title,
-                  description: tokenMetadata.description
-                }
+                  description: tokenMetadata.description,
+                },
               },
               gas: "300000000000000",
-              deposit: "0"
-            }
-          }
-        ]
+              deposit: "0",
+            },
+          },
+        ],
       });
 
       console.log("Transaction result:", result);
@@ -53,9 +66,9 @@ const MintSBT = () => {
 
   const handleMetadataChange = (e) => {
     const { name, value } = e.target;
-    setTokenMetadata(prevMetadata => ({
+    setTokenMetadata((prevMetadata) => ({
       ...prevMetadata,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -72,14 +85,18 @@ const MintSBT = () => {
             headerInfo={{
               title: "Issue a Credential to a User",
               subtitle: "",
-              description: "Organizations can issue job-related or educational credentials to users.",
+              description:
+                "Organizations can issue job-related or educational credentials to users.",
             }}
           />
 
           <div className="mt-12.5 bg-white rounded-lg shadow-xl p-6 mb-10">
             <h3 className="text-xl font-bold mb-4">Mint a Credential SBT</h3>
             <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="recipientId">
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="recipientId"
+              >
                 Recipient ID
               </label>
               <input
@@ -93,7 +110,10 @@ const MintSBT = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="title"
+              >
                 Credential Title
               </label>
               <input
@@ -107,7 +127,10 @@ const MintSBT = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="description"
+              >
                 Description
               </label>
               <textarea
